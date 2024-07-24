@@ -5,6 +5,7 @@ import { PersonasModule } from './personas/personas.module';
 import { AutosModule } from './autos/autos.module';
 import { RolesModule } from './roles/roles.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UbicacionesModule } from './ubicaciones/ubicaciones.module';
 
 @Module({
   imports: [PersonasModule, AutosModule, RolesModule, TypeOrmModule.forRoot({
@@ -16,7 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     database: 'nest',
     entities: ['dist/**/*.entity.{ts,js}'],
     synchronize: true,
-  })],
+  }), UbicacionesModule],
   controllers: [AppController],
   providers: [AppService],
 })
