@@ -1,0 +1,7 @@
+docker network create mi_red
+
+docker run --name nombre_contenedor_postgres --network mi_red -e POSTGRES_PASSWORD=tu_contraseña -p 543
+2:5432 -d postgres
+
+docker run --name nombre_contenedor_pgadmin --network mi_red -e PGADMIN_DEFAULT_EMAIL=asd1@asd.com -e PGADMIN_DEFAULT_PASSWORD
+=contra -p 80:80 -d dpage/pgadmin4
